@@ -1,0 +1,180 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #f2f6e9;
+}
+
+/*--- navigation bar ---*/
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #222;
+}
+
+.nav-link,
+.navbar-brand {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Login dropdown style */
+#loginDropdown {
+    margin-right: 100px;
+}
+
+#logout {
+    margin-right: 100px; 
+}
+
+#loginButton {
+    font-size: 23px;
+    border: 1px solid #6ab446;
+    background: #5e46b4;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+#dropdown {
+    width: 300px;
+    padding: 25px;
+}
+
+#newAccount {
+    font-size: 20px;
+}
+
+
+
+/* background image */
+.header {
+    background-image: url(../../images/studio.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.description {
+    text-align: center;
+}
+
+.description h1 {
+    color: #6ab446;
+}
+
+.description p {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+/* Search button */
+.description button {
+    border: 1px solid #6ab446;
+    background: #5e46b4;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.description button:hover {
+    border: 1px solid #fff;
+    background: #fff;
+    color: #000;
+}
+
+/* send button */
+.features .form-control,
+.features input {
+    border-radius: 15px;
+}
+
+.features .btn {
+    background-color: #589b37;
+    border: 1px solid #589b37;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.features .btn:hover {
+    background-color: #333;
+    border: 1px solid #333;
+}
+
+/* Style for the 3-Column section */
+.features {
+    margin: 4em auto;
+    padding: 1em;
+    /* position: relative; */
+    background-color: whitesmoke;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.feature-title {
+    color: darkgray;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.features img {
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 16px;
+}
+
+.features p {
+    color: darkgray;
+}
+
+
+#column1,
+#column2,
+#column3 {
+    padding: 50px;
+
+}
+
+/* Footer */
+.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 30px 0 15px;
+}
+
+.footer-copyright {
+    color: #666;
+    padding: 20px 0;
+}
+
+/* Media Queries */
+@media (max-width: 575.98px) {
+    .description {
+        left: 0;
+        padding: 0 15px;
+        position: absolute;
+        top: 10%;
+        transform: none;
+        text-align: center;
+    }
+
+    .description h1 {
+        font-size: 2em;
+    }
+
+    .description p {
+        font-size: 1.2rem;
+    }
+
+    .features {
+        margin: 0;
+    }
+}

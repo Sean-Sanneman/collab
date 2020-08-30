@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>COLLAB.com</title>
+    <title>Profile - Collab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -31,36 +31,12 @@
         </button>
 
         <!-- Bootstrap Login dropdown -->
-        <div id="loginDropdown" class="dropdown">
-            <button id="loginButton" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Login / Register
-            </button>
-            <div id="dropdown" class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-                <form class="text-left">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input type="email" class="form-control" id="inputUsername" aria-describedby="usernameHelp">
-                        <small id="usernameHelp" class="form-text text-muted">Enter your unique username</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="signOutCheck">
-                        <label class="form-check-label" for="exampleCheck1">Sign me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-                <!-- New account link -->
-                <br>
-                <br>
-                <!-- link to Profile page -->
-                <button id="newAccount" type="button" class="btn btn-link">
-                    <a href="./profile.html">New Account</a>
-                </button>
-            </div>
+        <div id="logout">
+        <button id="loginButton" class="btn btn-secondary text-center" type="button" id="dropdownMenuButton"
+            aria-haspopup="true" aria-expanded="false">
+            Logout
+        </button>
+
         </div>
 
     </nav>
@@ -70,8 +46,8 @@
 
         <div class="description">
             <br>
-            <h1>Welcome to the Musicians' Collaborative Laboratory!</h1>
-            <p>(Here we enter a descriptive text, describing how the website collaboration works, and how to use.)</p>
+            <h1>Create new user</h1>
+            <p>Please enter your information to create your new account.</p>
 
 
 
@@ -79,41 +55,69 @@
             <div class="container features">
                 <div class="row">
                     <div id="column1" class="col-lg-4 col-md-4 col-sm-12">
-                        <h3 class="feature-title">News</h3>
+                        <h3 class="feature-title">Personal information:</h3>
 
-                        <p>What's new, updated daily!</p>
+                        <p>Please enter the following required information:</p>
+
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="(Search by keyword)" name="">
+                            <input type="text" class="form-control" placeholder="First Name" name="">
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control"
-                                rows="9">This is just an example of where the news, new artists, new musical collaboration projects, etc. would go if the website was fully-functional.</textarea>
+                            <input type="text" class="form-control" placeholder="Last Name" name="">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Phone number" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address" name="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="City" name="city">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Country" name="country">
                         </div>
                         <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+
                     </div>
+
                     <div id="column2" class="col-lg-4 col-md-4 col-sm-12">
-                        <h3 class="feature-title">Blog</h3>
+                        <h3 class="feature-title">Instrument / Genre / Band</h3>
 
-                        <p>Opinion, chat, forums!</p>
+                        <p>Please select if relevant</p>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="(Search by keyword)" name="">
+                            <textarea class="form-control" placeholder="Instrument" name="instrument"
+                                rows="4">INTRUMENTS: Need to create pull-down menu with available options.</textarea>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control"
-                                rows="9">Here is where various users' blogs could go eventually. The text box would resize dynamically.</textarea>
+                            <textarea class="form-control" placeholder="Genre" name="genre"
+                                rows="5">GENRES: Need to create pull-down menu with available options.</textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Band" name="band"
+                                rows="2">Should enter name of band, group, etc.</textarea>
                         </div>
                         <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
                     </div>
+
                     <div id="column3" class="col-lg-4 col-md-4 col-sm-12">
-                        <h3 class="feature-title">Artists / Bands</h3>
-                        <p>Quick search results</p>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="(Search by keyword)" name="">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control"
-                                rows="9">Here could go the results for artists, musicians, bands that the user has searched for.</textarea>
-                        </div>
+                        <h3 class="feature-title">Username / Password</h3>
+                        
+                        <form>
+                            <div class="form-group">
+                                <label for="usernameInput">Username</label>
+                                <input type="email" class="form-control" id="usernameInput" placeholder="Username"
+                                    aria-describedby="usernameHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>    
+                        </form>
+                        <br>
                         <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
                     </div>
                 </div>
