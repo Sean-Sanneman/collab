@@ -18,7 +18,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-md">
         <!-- for branding; logo image -->
-        <a class="navbar-brand">
+        <a href="./index.html" class="navbar-brand">
             <img src="images/collab-name-and-text.png" width="550" height="165" alt="Collab logo">
             <img src="images/soundwave.png" width="650" height="175" alt="soundwave img">
         </a>
@@ -78,7 +78,6 @@
                     <!-- Column 2 -->
                     <div id="column2" class="col-lg-4 col-md-4 col-sm-12">
                         <h3 class="feature-title">Instrument / Genre / Band</h3>
-
                         <p>Please select if relevant</p>
                         <div class="form-group">
                             <textarea class="form-control" placeholder="Instrument" name="instrument"
@@ -92,20 +91,13 @@
                             <textarea class="form-control" placeholder="Band" name="band"
                                 rows="2">Should enter name of band, group, etc.</textarea>
                         </div>
+                        <!-- the following breaks are intended to push the "Submut" button lower in the column -->
                         <br>
-                        <p>Do you want to create a new band or group profile?</p>
-
-                        <!-- Radial check boxes for yes or no -->
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="yes">
-                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        <div id="profileSubmit">
+                            <input type="submit" class="btn btn-secondary btn-block" value="Submit" name="submit">
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
-                            <label class="form-check-label" for="inlineRadio2">No</label>
-                        </div>
+                        <br><br>
+                        <h4><a href="./band-profile.html">Create new band or group profile?</a></h4>
                     </div>
 
                     <!-- Column 3 -->
@@ -124,13 +116,6 @@
                                 <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                             </div>
                         </form>
-
-                        <!-- the following breaks are intended to push the "Submut" button lower in the column -->
-                        <br><br><br><br><br><br>
-
-                        <div id="profileSubmit">
-                            <input type="submit" class="btn btn-secondary btn-block" value="Submit" name="submit">
-                        </div>
                     </div>
                 </div>
             </div>
