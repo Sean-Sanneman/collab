@@ -38,6 +38,15 @@ body {
     color: #fff;
 }
 
+/* Profile page Submit button */
+.btn-block {
+    font-size: 23px;
+    border: 1px solid #6ab446;
+    background: #5e46b4;
+    border-radius: 15px;
+    color: #fff;
+}
+
 .navbar-collapse {
     justify-content: flex-end;
 }
@@ -111,7 +120,6 @@ body {
 .features {
     margin: 4em auto;
     padding: 1em;
-    /* position: relative; */
     background-color: whitesmoke;
     background: rgba(0, 0, 0, 0.6);
 }
@@ -141,6 +149,10 @@ body {
 #column3 {
     padding: 50px;
 
+}
+
+.form-check-label {
+    color: whitesmoke;
 }
 
 /* Footer */
