@@ -18,10 +18,11 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-md">
         <!-- for branding; logo image -->
-        <a href="./index.html" class="navbar-brand">
-            <img src="images/collab-name-and-text.png" width="550" height="130" alt="Collab logo">
-            <img src="images/soundwave.png" width="600" height="120" alt="soundwave img">
+        <a class="navbar-brand">
+            <img src="images/collab-name-and-text.png" width="275" height="65" alt="Collab logo">
+            <img src="images/soundwave.png" width="300" height="60" alt="soundwave img">
         </a>
+
 
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
             <span class="navbar-toggler-icon"></span> <!-- opens menu on smaller screens -->
@@ -29,15 +30,44 @@
 
         <button id="linkPages" type="button" class="btn btn-dark">Artist Profile</button>
         <button id="linkPages" type="button" class="btn btn-dark">Band Profile</button>
-        <button id="linkPages" type="button" class="btn btn-dark">Search</button>
+
 
         <!-- Bootstrap Login dropdown -->
-        <div id="logout">
-            <button id="loginButton" class="btn btn-dark text-center" type="button" id="dropdownMenuButton"
-                aria-haspopup="true" aria-expanded="false">
-                Logout
+        <div id="loginDropdown" class="dropdown">
+            <button id="loginButton" class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login / Register
             </button>
+            <div id="dropdown" class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
+                <form class="text-left">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Username</label>
+                        <input type="email" class="form-control" id="inputUsername" aria-describedby="usernameHelp">
+                        <small id="usernameHelp" class="form-text text-muted">Enter your unique username</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="signOutCheck">
+                        <label class="form-check-label" for="exampleCheck1">Sign me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+                <!-- New account link -->
+                <br>
+                <br>
+                <!-- link to Profile page -->
+                <button id="newAccount" type="button" class="btn btn-link">
+                    <a href="./profile.html">New Account</a>
+                </button>
+            </div>
+            
+
         </div>
+
+
     </nav>
 
     <!-- Page content container -->
@@ -45,7 +75,7 @@
         <div class="description">
             <br>
             <h1>Band profile</h1>
-            <p>Please enter your information to create your new account.</p>
+            
 
             <!-- 3-Column Section -->
             <div class="container features panelEffects">
