@@ -23,51 +23,13 @@
             <img src="images/soundwave.png" width="300" height="60" alt="soundwave img">
         </a>
 
-
         <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
             <span class="navbar-toggler-icon"></span> <!-- opens menu on smaller screens -->
         </button>
 
         <button id="linkPages" type="button" class="btn btn-dark">Artist Profile</button>
         <button id="linkPages" type="button" class="btn btn-dark">Band Profile</button>
-
-
-        <!-- Bootstrap Login dropdown -->
-        <div id="loginDropdown" class="dropdown">
-            <button id="loginButton" class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Login / Register
-            </button>
-            <div id="dropdown" class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-                <form class="text-left">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input type="email" class="form-control" id="inputUsername" aria-describedby="usernameHelp">
-                        <small id="usernameHelp" class="form-text text-muted">Enter your unique username</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="signOutCheck">
-                        <label class="form-check-label" for="exampleCheck1">Sign me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
-                </form>
-                <!-- New account link -->
-                <br>
-                <br>
-                <!-- link to Profile page -->
-                <button id="newAccount" type="button" class="btn btn-link">
-                    <a href="./profile.html">New Account</a>
-                </button>
-            </div>
-            
-
-        </div>
-
-
+        <button id="linkPages" type="button" class="btn btn-dark">Logout</button>
     </nav>
 
     <!-- Page content container -->
@@ -88,13 +50,19 @@
                     <div id="column2" class="col-lg-8 col-md-8 col-sm-12">
                         <h3 class="feature-title">Band name</h3>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="First Name" name="">
+                            <input type="text" class="form-control" placeholder="Enter band name" name="">
                         </div> 
                         <h3 class="feature-title">Genre</h3>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Genre" name="genre"
-                                rows="2"></textarea>
-                        </div>
+                        <!-- Dropdown Menu -->
+                        <select id="bandDropdown" onchange="artistGenreDropdown()" placeholder="[search by artist genre]">
+                            <option value="SearchInstrument">Search by Band Genre</option>
+                            <option value="Piano">Pop</option>
+                            <option value="Drums">Hip-Hop</option>
+                            <option value="Guitar">Rock</option>
+                            <option value="Violin">R&B</option>
+                            <option value="Violin">need to add the genres</option>
+                          </select>
+                          <br><br>
                         <h3 class="feature-title">Tell us more about your project</h3>                        
                         <div class="form-group">
                             <textarea class="form-control" placeholder="Instrument" name="instrument"

@@ -8,7 +8,7 @@ function myInstrumentDropdown() {
   var x = document.getElementById("myInstrument").value;
   console.log(x)
 
-  // ADD FETCH CALL TO DATABASE HERE! //
+// ADD FETCH CALL TO DATABASE HERE! //
 
 }
 

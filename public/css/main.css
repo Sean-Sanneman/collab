@@ -191,6 +191,17 @@ body {
   padding: 7px 40px 7px 40px;
 }
 
+/* Dropdown menus on Profile page */
+#profileDropdown {
+  padding: 8px 72px 8px 72px;
+}
+
+/* Dropdown menu on Band page */
+#bandDropdown {
+  padding: 9px 255px 9px 255px;
+  text-align: left;
+}
+
 /* Media Queries */
 @media (max-width: 575.98px) {
   .description {

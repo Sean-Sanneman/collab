@@ -30,44 +30,9 @@
 
         <button id="linkPages" type="button" class="btn btn-dark">Artist Profile</button>
         <button id="linkPages" type="button" class="btn btn-dark">Band Profile</button>
-
-
-        <!-- Bootstrap Login dropdown -->
-        <div id="loginDropdown" class="dropdown">
-            <button id="loginButton" class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Login / Register
-            </button>
-            <div id="dropdown" class="dropdown-menu text-center" aria-labelledby="dropdownMenuButton">
-                <form class="text-left">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input type="email" class="form-control" id="inputUsername" aria-describedby="usernameHelp">
-                        <small id="usernameHelp" class="form-text text-muted">Enter your unique username</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputPassword">Password</label>
-                        <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="signOutCheck">
-                        <label class="form-check-label" for="exampleCheck1">Sign me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
-                </form>
-                <!-- New account link -->
-                <br>
-                <br>
-                <!-- link to Profile page -->
-                <button id="newAccount" type="button" class="btn btn-link">
-                    <a href="./profile.html">New Account</a>
-                </button>
-            </div>
+        <button id="linkPages" type="button" class="btn btn-dark">Logout</button>
             
-
         </div>
-
-
     </nav>
 
     <!-- Page content container -->
@@ -111,12 +76,26 @@
                     <div id="column2" class="col-lg-4 col-md-4 col-sm-12">
                         <h3 class="feature-title">Instrument / Genre / Band</h3>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Instrument" name="instrument"
-                                rows="3">INTRUMENTS: So are we decided; no more pull-down menu?</textarea>
+                            <!-- Dropdown menu -->
+                            <select id="profileDropdown" onchange="instrumentDropdown()" placeholder="[search by artist instrument]">
+                                <option value="SearchInstrument">Search by Instrument</option>
+                                <option value="Piano">Piano</option>
+                                <option value="Drums">Percussion</option>
+                                <option value="Guitar">Guitar</option>
+                                <option value="Violin">Violin</option>
+                                <option value="Violin">Add the instruments</option>
+                              </select>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" placeholder="Genre" name="genre"
-                                rows="3">GENRES: So are we decided; no more pull-down menu?</textarea>
+                            <!-- Dropdown Menu -->
+                            <select id="profileDropdown" onchange="artistGenreDropdown()" placeholder="[search by artist genre]">
+                                <option value="SearchInstrument">Search by Artist Genre</option>
+                                <option value="Piano">Pop</option>
+                                <option value="Drums">Hip-Hop</option>
+                                <option value="Guitar">Rock</option>
+                                <option value="Violin">R&B</option>
+                                <option value="Violin">need to add the genres</option>
+                              </select>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" placeholder="Band" name="band"
@@ -139,7 +118,7 @@
                                 <label for="usernameInput">Username</label>
                                 <p>Create new username</p>
                                 <input type="email" class="form-control" id="usernameInput" placeholder="Username"
-                                    aria-describedby="usernameHelp">
+                                aria-describedby="usernameHelp">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
