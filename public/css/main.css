@@ -24,6 +24,7 @@ body {
 /* Login dropdown style */
 #loginDropdown {
     margin-right: 100px;
+    z-index: 9999;
 }
 
 #logout {
@@ -31,11 +32,12 @@ body {
 }
 
 #loginButton {
-    font-size: 23px;
-    border: 1px solid #6ab446;
-    background: #5e46b4;
-    border-radius: 15px;
+    font-size: 20px;
+    /* border: 1px solid #6ab446; */
+    /* background: rgb(41, 48, 48); */
+    border-radius: 5px;
     color: #fff;
+    margin: 10px;
 }
 
 /* Profile page Submit button */
@@ -61,6 +63,10 @@ body {
 }
 
 
+#linkPages {
+    padding: 10px 20px;
+    margin: 10px;
+}
 
 /* background image */
 .header {

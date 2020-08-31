@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <title>COLLAB.com</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +12,6 @@
 
     <!-- main.css link -->
     <link rel="stylesheet" type="text/css" href="./public/css/main.css">
-
 </head>
 
 <body>
@@ -21,8 +19,8 @@
     <nav class="navbar navbar-expand-md">
         <!-- for branding; logo image -->
         <a class="navbar-brand">
-            <img src="images/collab-name-and-text.png" width="550" height="155" alt="Collab logo">
-            <img src="images/soundwave.png" width="650" height="175" alt="soundwave img">
+            <img src="images/collab-name-and-text.png" width="550" height="130" alt="Collab logo">
+            <img src="images/soundwave.png" width="600" height="120" alt="soundwave img">
         </a>
 
 
@@ -30,9 +28,13 @@
             <span class="navbar-toggler-icon"></span> <!-- opens menu on smaller screens -->
         </button>
 
+        <button id="linkPages" type="button" class="btn btn-dark">Artist Profile</button>
+        <button id="linkPages" type="button" class="btn btn-dark">Band Profile</button>
+        <button id="linkPages" type="button" class="btn btn-dark">Search</button>
+
         <!-- Bootstrap Login dropdown -->
         <div id="loginDropdown" class="dropdown">
-            <button id="loginButton" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+            <button id="loginButton" class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Login / Register
             </button>
@@ -51,7 +53,7 @@
                         <input type="checkbox" class="form-check-input" id="signOutCheck">
                         <label class="form-check-label" for="exampleCheck1">Sign me out</label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
                 </form>
                 <!-- New account link -->
                 <br>
@@ -61,9 +63,15 @@
                     <a href="./profile.html">New Account</a>
                 </button>
             </div>
+            
+
         </div>
 
+
     </nav>
+
+    
+        
 
     <!-- Page content container -->
     <header class="page-header header container-fluid">
@@ -79,40 +87,36 @@
             <div class="container features panelEffects">
                 <div class="row">
                     <div id="column1" class="col-lg-4 col-md-4 col-sm-12">
-                        <h3 class="feature-title">News</h3>
-
-                        <p>What's new, updated daily!</p>
+                        <h3 class="feature-title">Search Artist by Instrument</h3>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="(Search by keyword)" name="">
+                            <input type="text" class="form-control" placeholder="[search by artist instrument]" name="">
                         </div>
                         <div class="form-group">
                             <textarea class="form-control"
-                                rows="9">This is just an example of where the news, new artists, new musical collaboration projects, etc. would go if the website was fully-functional.</textarea>
+                                rows="10">[results:]</textarea>
                         </div>
                         <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
                     </div>
-                    <div id="column2" class="col-lg-4 col-md-4 col-sm-12">
-                        <h3 class="feature-title">Blog</h3>
-
-                        <p>Opinion, chat, forums!</p>
+                    <div id="column2" class="col-lg-4 col-md-4 col-sm-12">                        
+                        <h3 class="feature-title">Search Artist by Genre</h3>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="(Search by keyword)" name="">
+                            <input type="text" class="form-control" placeholder="[search by artist genre]" name="">
                         </div>
                         <div class="form-group">
                             <textarea class="form-control"
-                                rows="9">Here is where various users' blogs could go eventually. The text box would resize dynamically.</textarea>
+                                rows="10">[results:]</textarea>
                         </div>
                         <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
                     </div>
                     <div id="column3" class="col-lg-4 col-md-4 col-sm-12">
-                        <h3 class="feature-title">Artists / Bands</h3>
-                        <p>Quick search results</p>
+                        <h3 class="feature-title">Search Band by Genre</h3>
+                        <br>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="(Search by keyword)" name="">
+                            <input type="text" class="form-control" placeholder="[search by band genre]" name="">
                         </div>
                         <div class="form-group">
                             <textarea class="form-control"
-                                rows="9">Here could go the results for artists, musicians, bands that the user has searched for.</textarea>
+                                rows="10">[results:]</textarea>
                         </div>
                         <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
                     </div>
