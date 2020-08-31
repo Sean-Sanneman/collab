@@ -86,7 +86,7 @@ body {
 .description p {
   color: #fff;
   font-size: 1.3rem;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 /* Search button */
@@ -104,6 +104,7 @@ body {
 }
 
 /* send button */
+.features select,
 .features .form-control,
 .features input {
   border-radius: 15px;
@@ -123,7 +124,7 @@ body {
 
 /* Style for the 3-Column section */
 .features {
-  margin: 4em auto;
+  margin: 1em auto;
   padding: 1em;
   background-color: whitesmoke;
   background: rgba(0, 0, 0, 0.6);
@@ -162,7 +163,7 @@ body {
 #column1,
 #column2,
 #column3 {
-  padding: 50px;
+  padding: 15px;
 }
 
 #results {
@@ -183,6 +184,11 @@ body {
 .footer-copyright {
   color: #666;
   padding: 20px 0;
+}
+
+/* DropDown Search Menus */
+#myInstrument {
+  padding: 7px 40px 7px 40px;
 }
 
 /* Media Queries */
