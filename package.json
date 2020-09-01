@@ -1,32 +1,26 @@
 {
-  "name": "collab",
-  "version": "1.0.0",
-  "description": "Collab is a space for musicians to find other people to collaborate with remotely.",
-  "main": "server.js",
+  "name": "15th",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon ./server.js",
+    "seed": "node ./db/seed/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Sean-Sanneman/collab.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sean-Sanneman/collab/issues"
-  },
-  "homepage": "https://github.com/Sean-Sanneman/collab#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "~4.16.1",
     "express-handlebars": "^5.1.0",
     "express-session": "^1.17.1",
     "handlebars": "^4.7.6",
+    "morgan": "~1.9.1",
     "mysql2": "^2.1.0",
     "sequelize": "^6.3.4"
+  },
+  "devDependencies": {
+    "http-errors": "^1.8.0"
   }
 }
