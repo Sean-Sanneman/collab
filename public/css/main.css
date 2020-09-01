@@ -166,9 +166,12 @@ body {
   padding: 15px;
 }
 
+/* Large results box on the main page */
 #results {
   padding: 12px 40px;
+  opacity: 0.3;
 }
+
 
 .form-check-label {
   color: whitesmoke;
