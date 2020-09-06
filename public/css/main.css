@@ -1,0 +1,230 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f2f6e9;
+}
+
+/*--- navigation bar ---*/
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: #222;
+}
+
+.nav-link,
+.navbar-brand {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Login dropdown style */
+#loginDropdown {
+  margin-right: 100px;
+  z-index: 9999;
+}
+
+#logout {
+  margin-right: 100px;
+}
+
+#loginButton {
+  font-size: 20px;
+  /* border: 1px solid #6ab446; */
+  /* background: rgb(41, 48, 48); */
+  border-radius: 5px;
+  color: #fff;
+  margin: 10px;
+}
+
+/* Profile page Submit button */
+.btn-block {
+  font-size: 23px;
+  border: 1px solid #6ab446;
+  background: #5e46b4;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.navbar-collapse {
+  justify-content: flex-end;
+}
+
+#dropdown {
+  width: 300px;
+  padding: 25px;
+}
+
+#newAccount {
+  font-size: 20px;
+}
+
+#linkPages {
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+/* background image */
+.header {
+  background-image: url(../../images/studio.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.description {
+  text-align: center;
+}
+
+.description h1 {
+  color: #6ab446;
+}
+
+.description p {
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+/* Search button */
+.description button {
+  border: 1px solid #6ab446;
+  background: #5e46b4;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.description button:hover {
+  border: 1px solid #fff;
+  background: #fff;
+  color: #000;
+}
+
+/* send button */
+.features select,
+.features .form-control,
+.features input {
+  border-radius: 15px;
+}
+
+.features .btn {
+  background-color: #589b37;
+  border: 1px solid #589b37;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.features .btn:hover {
+  background-color: #333;
+  border: 1px solid #333;
+}
+
+/* Style for the 3-Column section */
+.features {
+  margin: 1em auto;
+  padding: 1em;
+  background-color: whitesmoke;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.feature-title {
+  color: darkgray;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.features img {
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 16px;
+}
+
+.features p {
+  color: darkgray;
+}
+
+/* Adds hazey-smokey effect to main panel */
+.panelEffects {
+  padding: 12px 36px 12px 36px;
+  background-color: rgba(14, 14, 14, 0.6);
+  border-width: 5px;
+  border-color: black;
+  border: solid;
+  box-shadow: 8px 8px 48px 32px rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+}
+
+#column1,
+#column2,
+#column3 {
+  padding: 15px;
+}
+
+/* Large results box on the main page */
+#results {
+  padding: 12px 40px;
+  opacity: 0.3;
+}
+
+
+.form-check-label {
+  color: whitesmoke;
+}
+
+/* Footer */
+.page-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 30px 0 15px;
+}
+
+.footer-copyright {
+  color: #666;
+  padding: 20px 0;
+}
+
+/* DropDown Search Menus */
+#formatDropdown {
+  padding: 7px 40px 7px 40px;
+}
+
+/* Dropdown menus on Profile page */
+#profileDropdown {
+  padding: 8px 72px 8px 72px;
+}
+
+/* Dropdown menu on Band page */
+#bandDropdown {
+  padding: 9px 255px 9px 255px;
+  text-align: left;
+}
+
+/* Media Queries */
+@media (max-width: 575.98px) {
+  .description {
+    left: 0;
+    padding: 0 15px;
+    position: absolute;
+    top: 10%;
+    transform: none;
+    text-align: center;
+  }
+
+  .description h1 {
+    font-size: 2em;
+  }
+
+  .description p {
+    font-size: 1.2rem;
+  }
+
+  .features {
+    margin: 0;
+  }
+}

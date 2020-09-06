@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Band-Profile - Collab</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- main.css link -->
+    <link rel="stylesheet" type="text/css" href="./public/css/main.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md">
+        <!-- for branding; logo image -->
+        <a class="navbar-brand" href="index.html">
+            <img src="images/collab-name-and-text.png" width="300" height="65" alt="Collab logo">
+            <img src="images/soundwave.png" width="300" height="65" alt="soundwave img">
+        </a>
+
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span> <!-- opens menu on smaller screens -->
+        </button>
+
+        <button id="linkPages" type="button" class="btn btn-dark">Artist Profile</button>
+        <button id="linkPages" type="button" class="btn btn-dark">Band Profile</button>
+        <button id="linkPages" type="button" class="btn btn-dark">Logout</button>
+    </nav>
+
+    <!-- Page content container -->
+    <header class="page-header header container-fluid">
+        <div class="description">
+            <br>
+            <h1>Band profile</h1>
+            
+
+            <!-- 3-Column Section -->
+            <div class="container features panelEffects">
+                <div class="row">
+
+                    <!-- Column 1 -->
+                    <div id="column1" class="col-lg-2 col-md-2 col-sm-12"></div>
+
+                    <!-- Column 2 -->
+                    <div id="column2" class="col-lg-8 col-md-8 col-sm-12">
+                        <h3 class="feature-title">Band name</h3>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter band name" name="">
+                        </div> 
+                        <h3 class="feature-title">Genre</h3>
+                        <!-- Dropdown Menu -->
+                        <select id="bandDropdown" onchange="artistGenreDropdown()" placeholder="[search by artist genre]">
+                            <option value="SearchInstrument">Search by Band Genre</option>
+                                <option value="Alternative">Alternative</option>
+                                <option value="Blues">Blues</option>
+                                <option value="Bluegrass">Bluegrass</option>
+                                <option value="Classical">Classical</option>
+                                <option value="Country">Country</option>
+                                <option value="Disco">Disco</option>
+                                <option value="Dub/Reggae">Dub/Reggae</option>
+                                <option value="EDM/House">EDM/House/Techno</option>
+                                <option value="Electroclash">Electroclash</option>
+                                <option value="Electronic">Electronic</option>
+                                <option value="Folk">Folk</option>
+                                <option value="Funk">Funk</option>
+                                <option value="Goth">Goth/Industrial</option>
+                                <option value="Hardcore/Metal">Hardcore/Metal</option>
+                                <option value="Hip-Hop/Rap">Hip-Hop/Rap</option>
+                                <option value="Indie Rock">Indie Rock</option>
+                                <option value="Jazz">Jazz</option>
+                                <option value="Latin">Latin</option>
+                                <option value="Motown">Motown</option>
+                                <option value="New Age">New Age</option>
+                                <option value="Opera">Opera</option>
+                                <option value="Pop">Pop</option>
+                                <option value="Progressive">Progressive</option>
+                                <option value="Punk">Punk</option>
+                                <option value="R&B/Soul">R&B/Soul</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Rockabilly">Rockabilly</option>
+                                <option value="Ska">Ska</option>
+                                <option value="Tex-Mex/Tejano">Tex-Mex/Tejano</option>
+                                <option value="Trance">Trance</option>
+                                <option value="Trip-Hop">Trip-Hop</option>
+                                <option value="World Music">World Music</option>
+                          </select>
+                          <br><br>
+                        <h3 class="feature-title">Tell us more about your project</h3>                        
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Instrument" name="instrument"
+                                rows="7">This is where the user can enter the description.</textarea>
+                        </div>
+
+                        <div id="profileSubmit">
+                            <input type="submit" class="btn btn-secondary btn-block" value="Submit" name="submit">
+                        </div>    
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div id="column3" class="col-lg-2 col-md-2 col-sm-12"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2-Column Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque interdum quam odio, quis
+                        placerat ante luctus eu. Sed aliquet dolor id sapien rutrum, id vulputate quam iaculis.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <p>1640 Riverside Drive, Hill Valley, California
+                        <br />info@mywebsite.com
+                        <br />+ 01 234 567 88</p>
+                </div>
+            </div>
+            <div class="footer-copyright text-center">© 2020 Copyright: Collab.com</div>
+    </footer>
+
+    <!-- jQuery link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <!-- Bootstrap JavaScript link -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+    <!-- Link to main.js -->
+    <script src="./public/js/main.js"></script>
+
+</body>
+
+</html>
