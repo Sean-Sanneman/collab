@@ -37,4 +37,4 @@ MIT License
 
 Sean-Sanneman https://github.com/Sean-Sanneman
 
-## You can contact me at You can reach Sean Sanneman @ seandafydd@gmail.com if you have any questions. if you have any questions.
+## You can contact Sean Sanneman @ seandafydd@gmail.com if you have any questions.
