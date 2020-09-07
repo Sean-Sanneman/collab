@@ -17,7 +17,11 @@ Visit https://immense-wave-96747.herokuapp.com/ to see what we're up to.
 
 ## Usage
 
-Our site is still in beta, but feel free to create a new account, and browse our instrument/genre search options. We hope you'll like what you see. More coming soon!
+Our site is still in beta, but feel free to create a new account, and browse our instrument/genre search options.
+
+![image](https://user-images.githubusercontent.com/64930571/92360896-677f8500-f0a2-11ea-8537-46b8a703c0d9.png)
+
+We hope you'll like what you see. More coming soon!
 
 ## Credits
 
