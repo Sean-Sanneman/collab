@@ -35,6 +35,6 @@ MIT License
 
 ## GitHub username:
 
-Sean-Sanneman https://github.com/Sean-Sanneman
+https://github.com/Sean-Sanneman/collab
 
 ## You can contact Sean Sanneman @ seandafydd@gmail.com if you have any questions.
