@@ -1,0 +1,220 @@
+{{#if error}}
+    <p style="color: red">{{message}}</p>
+{{/if}}
+
+{{>header}}
+
+<!-- Page content container -->
+<header class="page-header header container-fluid">
+
+    <div class="description">
+        <br>
+        <h1>Welcome to the Musicians' Collaborative Laboratory!</h1>
+        <p>(Here we enter a descriptive text, describing how the website collaboration works, and how to use.)</p>
+
+        <!-- 3-Column Section -->
+        <div class="container features panelEffects">
+            <div class="row">
+                <div id="column1" class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group">
+                        <!-- Dropdown Menu -->
+                        <select id="formatDropdown" onchange="instrumentDropdown(this.value)">
+                            <option value="SearchInstrument">Search by Instrument</option>
+                            <option value="Accordion">Accordion</option>
+                            <option value="Bagpipes">Bagpipes</option>
+                            <option value="Banjo">Banjo</option>
+                            <option value="Bass Guitar">Bass Guitar</option>
+                            <option value="Bassoon">Bassoon</option>
+                            <option value="Cello">Cello</option>
+                            <option value="Clarinet">Clarinet</option>
+                            <option value="Clavichord">Clavichord</option>
+                            <option value="Computer/Software">Computer/Software</option>
+                            <option value="Didgeridoo">Didgeridoo</option>
+                            <option value="Drums">Drums</option>
+                            <option value="Fiddle">Fiddle</option>
+                            <option value="Flute">Flute</option>
+                            <option value="Guitar">Guitar</option>
+                            <option value="Harp">Harp</option>
+                            <option value="Harpsichord">Harpsichord</option>
+                            <option value="Mandolin">Mandolin</option>
+                            <option value="Oboe">Oboe</option>
+                            <option value="Organ">Organ</option>
+                            <option value="Percussion">Percussion</option>
+                            <option value="Recorder">Recorder</option>
+                            <option value="Saxophone">Saxophone</option>
+                            <option value="Sitar">Sitar</option>
+                            <option value="Synthesizer">Synthesizer</option>
+                            <option value="Tabla">Tabla</option>
+                            <option value="Trombone">Trombone</option>
+                            <option value="Trumpet">Trumpet</option>
+                            <option value="Theremin">Theremin</option>
+                            <option value="Tuba">Tuba</option>
+                            <option value="Ukulele">Ukulele</option>
+                            <option value="Viola">Viola</option>
+                            <option value="Violin">Violin</option>
+                            <option value="Vocals">Vocals</option>
+                            <option value="Xylophone">Xylophone</option>
+                            <option value="Zither">Zither</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="column2" class="col-lg-4 col-md-4 col-sm-12">
+
+                    <div class="form-group">
+                        <!-- Dropdown Menu -->
+                        <select id="formatDropdown" onchange="artistGenreDropdown(this.value)">
+                            <option value="SearchGenre">Search by Artist Genre</option>
+                            <option value="Alternative">Alternative</option>
+                            <option value="Blues">Blues</option>
+                            <option value="Bluegrass">Bluegrass</option>
+                            <option value="Classical">Classical</option>
+                            <option value="Country">Country</option>
+                            <option value="Disco">Disco</option>
+                            <option value="Dub/Reggae">Dub/Reggae</option>
+                            <option value="EDM/House">EDM/House/Techno</option>
+                            <option value="Electroclash">Electroclash</option>
+                            <option value="Electronic">Electronic</option>
+                            <option value="Folk">Folk</option>
+                            <option value="Funk">Funk</option>
+                            <option value="Goth">Goth/Industrial</option>
+                            <option value="Hardcore/Metal">Hardcore/Metal</option>
+                            <option value="Hip-Hop/Rap">Hip-Hop/Rap</option>
+                            <option value="Indie Rock">Indie Rock</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Latin">Latin</option>
+                            <option value="Motown">Motown</option>
+                            <option value="New Age">New Age</option>
+                            <option value="Opera">Opera</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Progressive">Progressive</option>
+                            <option value="Punk">Punk</option>
+                            <option value="R&B/Soul">R&B/Soul</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Rockabilly">Rockabilly</option>
+                            <option value="Ska">Ska</option>
+                            <option value="Tex-Mex">Tex-Mex/Tejano</option>
+                            <option value="Trance">Trance</option>
+                            <option value="Trip-Hop">Trip-Hop</option>
+                            <option value="World Music">World Music</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="column3" class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group">
+                        <!-- Dropdown Menu -->
+                        <select id="formatDropdown" onchange="bandGenreDropdown(this.value)">
+                            <option value="SearchInstrument">Search by Band Genre</option>
+                            <option value="Alternative">Alternative</option>
+                            <option value="Blues">Blues</option>
+                            <option value="Bluegrass">Bluegrass</option>
+                            <option value="Classical">Classical</option>
+                            <option value="Country">Country</option>
+                            <option value="Disco">Disco</option>
+                            <option value="Dub/Reggae">Dub/Reggae</option>
+                            <option value="EDM/House">EDM/House/Techno</option>
+                            <option value="Electroclash">Electroclash</option>
+                            <option value="Electronic">Electronic</option>
+                            <option value="Folk">Folk</option>
+                            <option value="Funk">Funk</option>
+                            <option value="Goth">Goth/Industrial</option>
+                            <option value="Hardcore/Metal">Hardcore/Metal</option>
+                            <option value="Hip-Hop/Rap">Hip-Hop/Rap</option>
+                            <option value="Indie Rock">Indie Rock</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Latin">Latin</option>
+                            <option value="Motown">Motown</option>
+                            <option value="New Age">New Age</option>
+                            <option value="Opera">Opera</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Progressive">Progressive</option>
+                            <option value="Punk">Punk</option>
+                            <option value="R&B/Soul">R&B/Soul</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Rockabilly">Rockabilly</option>
+                            <option value="Ska">Ska</option>
+                            <option value="Tex-Mex/Tejano">Tex-Mex/Tejano</option>
+                            <option value="Trance">Trance</option>
+                            <option value="Trip-Hop">Trip-Hop</option>
+                            <option value="World Music">World Music</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="results" class="row-fluid">
+                <div class="form-group">
+<!--                    <textarea class="form-control resultsText" rows="10">[results should populate here:]</textarea>-->
+                    <div id="results">
+                        <ul class="results-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    const showResults = (data) => {
+        let ul = $('#results .results-list');
+        $(data).each((i, val) => {
+            ul.html(`<li><a href='/artist/${val.id}' style="width: 100%; white-space: pre">${val.firstName}  &nbsp;  ${val.lastName}  &nbsp;   ${val.instrument}  &nbsp;  ${val.genre}</a></li>`)
+        })
+    };
+    const instrumentDropdown = async (val) => {
+        try {
+            const artists = await fetch('/artist/search/instrument', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    instrument: val
+                })
+            });
+            let results = await artists.json();
+            showResults(results.artists);
+        } catch (e) {
+            console.error(e.message);
+        }
+    }
+    const artistGenreDropdown = async (val) => {
+        try {
+            const artists = await fetch('/artist/search/genre', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    genre: val
+                })
+            });
+            let results = await artists.json();
+            console.log(results)
+            showResults(results.artists);
+        } catch (e) {
+            console.error(e.message);
+        }
+    }
+    const bandGenreDropdown = async (val) => {
+        try {
+            const artists = await fetch('/artist/search/bandgenre', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    bandGenre: val
+                })
+            });
+            let results = await artists.json();
+            showResults(results.artists);
+        } catch (e) {
+            console.error(e.message);
+        }
+    }
+</script>
+
+{{>footer}}

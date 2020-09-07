@@ -16,6 +16,8 @@ module.exports = {
                 const bands = await Band.findAll({
                     raw: true
                 });
+                console.log(bands)
+                console.log(artist)
                 res.render('artist/index', {
                     title: "Artist",
                     artist,
@@ -53,15 +55,16 @@ module.exports = {
                         id: req.session.user.id
                     }
                 });
-                req.session.user = artist.dataValues;
-                res.locals.user = artist.dataValues;
                 res.redirect('/artist');
             } else {
                 res.redirect('/')
             }
         } catch (e) {
-            res.render('error', {
-                title: "Artist"
+            console.log(e.message);
+            res.render('artist/index', {
+                title: "Artist Error",
+                error: true,
+                message: e.message
             })
         }
     },
@@ -122,13 +125,17 @@ module.exports = {
                         username: username
                     }
                 });
+                if(!artist) {
+                    res.redirect('/artist/register');
+                }
                 if(artist.validPassword(password)) {
                     req.session.user = artist.dataValues;
                     res.locals.user = artist.dataValues;
                     res.redirect('/');
                 } else {
-                    res.render('error', {
-                        title: "Login",
+                    res.render('index/index', {
+                        title: "Login Error",
+                        error: true,
                         message: "username or password is incorrect!!"
                     })
                 }
@@ -139,9 +146,6 @@ module.exports = {
                 title: 'error',
             });
         }
-    },
-    getArtistProfilePublic: async (req, res) => {
-
     },
     postSearchByInstrument: async (req, res) => {
         try {
@@ -154,7 +158,10 @@ module.exports = {
                 let tmp = artist.toJSON();
                 return {
                     id: tmp.id,
-                    name: `${tmp.firstName} ${tmp.lastName}`
+                    firstName: tmp.firstName,
+                    lastName: tmp.lastName,
+                    instrument: tmp.instrument,
+                    genre: tmp.genre
                 }
             });
             res.json({
@@ -178,7 +185,10 @@ module.exports = {
                 let tmp = artist.toJSON();
                 return {
                     id: tmp.id,
-                    name: `${tmp.firstName} ${tmp.lastName}`
+                    firstName: tmp.firstName,
+                    lastName: tmp.lastName,
+                    instrument: tmp.instrument,
+                    genre: tmp.genre
                 }
             });
             res.json({
@@ -203,12 +213,39 @@ module.exports = {
             artists = artists.map(artist => {
                 return {
                     id: artist.id,
-                    name: `${artist.firstName} ${artist.lastName}`
+                    firstName: artist.firstName,
+                    lastName: artist.lastName,
+                    instrument: artist.instrument,
+                    genre: artist.genre
                 }
             });
             res.json({
                 artists
             });
+        } catch (e) {
+            res.json({
+                status: 'error',
+                message: e.message
+            })
+        }
+    },
+    getArtistById: async (req, res) => {
+        try {
+            const artist = await Artist.findByPk(req.params.id, {
+                include: [Band],
+                raw: true,
+                nest: true
+            });
+            const bands = await Band.findAll({
+                raw: true
+            })
+            console.log(artist);
+            console.log(bands);
+            res.render('artist/showArtist', {
+                title: 'artist profile',
+                artist,
+                bands
+            })
         } catch (e) {
             res.json({
                 status: 'error',

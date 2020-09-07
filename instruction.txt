@@ -1,0 +1,44 @@
+Backend Endpoints:
+The Musician
+-POST: Adding / Register a new Musician Acct
+-GET: Getting a logged-in musician's info
+-POST: Changing logged in musician info
+The Band
+-GET: Displays all bands and associated musicians
+-GET: Displays all bands and associated musicians by a selected genre
+-POST: Creates a band name w genre info
+-POST: Associates Musicians to a band
+
+
+
+Node.js
+npm
+Inquirer Package
+Jest
+Express.js
+Insomnia Core
+Heroku
+Heroku CLI
+Middleware
+MySQL
+SQLite3
+download the JSON formatter extension for Chrome
+Sequelize package
+Dotenv
+bcrypt
+Handlebars.js
+Handlebars npm package
+Express-session package
+connect-session-sequelize package
+
+
+
+
+
+
+
+
+edit textarea in index.html page
+
+add all ajax functions !
+

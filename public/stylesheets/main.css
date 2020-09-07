@@ -169,9 +169,17 @@ body {
 /* Large results box on the main page */
 #results {
   padding: 12px 40px;
-  opacity: 0.3;
+  /*opacity: 0.3;*/
+  background-color: #ffffff;
+  border-radius: 25px;
+  min-height: 150px;
 }
-
+ul {
+  list-style-type: none;
+}
+#results .results-list {
+  color: #ffffff;
+}
 
 .form-check-label {
   color: whitesmoke;
@@ -191,18 +199,24 @@ body {
 
 /* DropDown Search Menus */
 #formatDropdown {
-  padding: 7px 40px 7px 40px;
+  /*padding: 7px 40px 7px 40px;*/
+  width: 252px;
+  padding: 7px;
 }
 
 /* Dropdown menus on Profile page */
 #profileDropdown {
-  padding: 8px 72px 8px 72px;
+  /*padding: 8px 72px 8px 72px;*/
+  width: 318px;
+  padding: 8px;
 }
 
 /* Dropdown menu on Band page */
 #bandDropdown {
-  padding: 9px 255px 9px 255px;
+  /*padding: 9px 255px 9px 255px;*/
   text-align: left;
+  width: 700px;
+  padding: 9px;
 }
 
 /* Media Queries */
@@ -228,3 +242,4 @@ body {
     margin: 0;
   }
 }
+

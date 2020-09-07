@@ -1,0 +1,78 @@
+{{> header }}
+
+<!-- Page content container -->
+<header class="page-header header container-fluid">
+    <div class="description">
+        <br>
+        <h1>Band profile</h1>
+
+
+        <!-- 3-Column Section -->
+        <div class="container features panelEffects">
+            <form method='post' action="/band" class="row">
+
+                <!-- Column 1 -->
+                <div id="column1" class="col-lg-2 col-md-2 col-sm-12"></div>
+
+                <!-- Column 2 -->
+                <div id="column2" class="col-lg-8 col-md-8 col-sm-12">
+                    <h3 class="feature-title">Band name</h3>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter band name" name="bandName" value="{{band.bandName}}">
+                    </div>
+                    <h3 class="feature-title">Genre</h3>
+                    <!-- Dropdown Menu -->
+                    <select id="bandDropdown" name="genre" data-value="{{band.genre}}">
+                        <option value="SearchInstrument">Search by Band Genre</option>
+                        <option value="Alternative">Alternative</option>
+                        <option value="Blues">Blues</option>
+                        <option value="Bluegrass">Bluegrass</option>
+                        <option value="Classical">Classical</option>
+                        <option value="Country">Country</option>
+                        <option value="Disco">Disco</option>
+                        <option value="Dub/Reggae">Dub/Reggae</option>
+                        <option value="EDM/House">EDM/House/Techno</option>
+                        <option value="Electroclash">Electroclash</option>
+                        <option value="Electronic">Electronic</option>
+                        <option value="Folk">Folk</option>
+                        <option value="Funk">Funk</option>
+                        <option value="Goth">Goth/Industrial</option>
+                        <option value="Hardcore/Metal">Hardcore/Metal</option>
+                        <option value="Hip-Hop/Rap">Hip-Hop/Rap</option>
+                        <option value="Indie Rock">Indie Rock</option>
+                        <option value="Jazz">Jazz</option>
+                        <option value="Latin">Latin</option>
+                        <option value="Motown">Motown</option>
+                        <option value="New Age">New Age</option>
+                        <option value="Opera">Opera</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Progressive">Progressive</option>
+                        <option value="Punk">Punk</option>
+                        <option value="R&B/Soul">R&B/Soul</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Rockabilly">Rockabilly</option>
+                        <option value="Ska">Ska</option>
+                        <option value="Tex-Mex/Tejano">Tex-Mex/Tejano</option>
+                        <option value="Trance">Trance</option>
+                        <option value="Trip-Hop">Trip-Hop</option>
+                        <option value="World Music">World Music</option>
+                    </select>
+                    <br><br>
+                    <h3 class="feature-title">Tell us more about your project</h3>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Description" name="description" rows="7">{{band.description}}</textarea>
+                    </div>
+
+                    <div id="profileSubmit">
+                        <input type="submit" class="btn btn-secondary btn-block" value="Submit" name="Edit Band">
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div id="column3" class="col-lg-2 col-md-2 col-sm-12"></div>
+            </form>
+        </div>
+    </div>
+</header>
+
+{{> footer }}

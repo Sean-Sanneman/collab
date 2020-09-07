@@ -1,0 +1,167 @@
+{{>header}}
+
+<!-- Page content container -->
+<header id="gridControl" class="page-header header container-fluid">
+    <div class="description">
+        <br>
+        <h1>Create new user</h1>
+        <!-- 3-Column Section -->
+        <div class="container features panelEffects">
+            <form action="/artist/register" method="post" class="row">
+                <!-- Column 1 -->
+                <div id="column1" class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="feature-title">Personal information:</h3>
+
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="First Name" name="firstName">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Last Name" name="lastName">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Phone number" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email Address" name="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="City" name="city">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Country" name="country">
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div id="column2" class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="feature-title">Instrument / Genre / Band</h3>
+                    <div class="form-group">
+                        <!-- Dropdown menu -->
+                        <label style="color: #ffffff">Instrument</label>
+                        <select id="profileDropdown" name="instrument">
+                            <option value="SearchInstrument">Search by Instrument</option>
+                            <option value="Accordion">Accordion</option>
+                            <option value="Bagpipes">Bagpipes</option>
+                            <option value="Banjo">Banjo</option>
+                            <option value="Bass Guitar">Bass Guitar</option>
+                            <option value="Bassoon">Bassoon</option>
+                            <option value="Cello">Cello</option>
+                            <option value="Clarinet">Clarinet</option>
+                            <option value="Clavichord">Clavichord</option>
+                            <option value="Computer/Software">Computer/Software</option>
+                            <option value="Didgeridoo">Didgeridoo</option>
+                            <option value="Drums">Drums</option>
+                            <option value="Fiddle">Fiddle</option>
+                            <option value="Flute">Flute</option>
+                            <option value="Guitar">Guitar</option>
+                            <option value="Harp">Harp</option>
+                            <option value="Harpsichord">Harpsichord</option>
+                            <option value="Mandolin">Mandolin</option>
+                            <option value="Oboe">Oboe</option>
+                            <option value="Organ">Organ</option>
+                            <option value="Percussion">Percussion</option>
+                            <option value="Recorder">Recorder</option>
+                            <option value="Saxophone">Saxophone</option>
+                            <option value="Sitar">Sitar</option>
+                            <option value="Synthesizer">Synthesizer</option>
+                            <option value="Tabla">Tabla</option>
+                            <option value="Trombone">Trombone</option>
+                            <option value="Trumpet">Trumpet</option>
+                            <option value="Theremin">Theremin</option>
+                            <option value="Tuba">Tuba</option>
+                            <option value="Ukulele">Ukulele</option>
+                            <option value="Viola">Viola</option>
+                            <option value="Violin">Violin</option>
+                            <option value="Vocals">Vocals</option>
+                            <option value="Xylophone">Xylophone</option>
+                            <option value="Zither">Zither</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <!-- Dropdown Menu -->
+                        <label style="color: #ffffff">Genre</label>
+                        <select id="profileDropdown" name="genre">
+                            <option value="SearchGenre">Search by Artist Genre</option>
+                            <option value="Alternative">Alternative</option>
+                            <option value="Blues">Blues</option>
+                            <option value="Bluegrass">Bluegrass</option>
+                            <option value="Classical">Classical</option>
+                            <option value="Country">Country</option>
+                            <option value="Disco">Disco</option>
+                            <option value="Dub/Reggae">Dub/Reggae</option>
+                            <option value="EDM/House/Techno">EDM/House/Techno</option>
+                            <option value="Electroclash">Electroclash</option>
+                            <option value="Electronic">Electronic</option>
+                            <option value="Folk">Folk</option>
+                            <option value="Funk">Funk</option>
+                            <option value="Goth/Industrial">Goth/Industrial</option>
+                            <option value="Hardcore/Metal">Hardcore/Metal</option>
+                            <option value="Hip-Hop/Rap">Hip-Hop/Rap</option>
+                            <option value="Indie Rock">Indie Rock</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="Latin">Latin</option>
+                            <option value="Motown">Motown</option>
+                            <option value="New Age">New Age</option>
+                            <option value="Opera">Opera</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Progressive">Progressive</option>
+                            <option value="Punk">Punk</option>
+                            <option value="R&B/Soul">R&B/Soul</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Rockabilly">Rockabilly</option>
+                            <option value="Ska">Ska</option>
+                            <option value="Tex-Mex/Tejano">Tex-Mex/Tejano</option>
+                            <option value="Trance">Trance</option>
+                            <option value="Trip-Hop">Trip-Hop</option>
+                            <option value="World Music">World Music</option>
+                        </select>
+                    </div>
+                    <!--                    <div class="form-group">-->
+                    <!--                            <textarea class="form-control" placeholder="Band" name="band"-->
+                    <!--                                      rows="2">Should enter name of band, group, etc.</textarea>-->
+                    <!--                    </div>-->
+                    <div class="form-group">
+                        <!-- Dropdown Menu -->
+                        <label style="color: #ffffff">Band</label>
+                        <select id="profileDropdown" name="band" style="width: 318px;">
+                            <option value="null">no band</option>
+                            {{#each bands}}
+                                <option value="{{bandName}}">{{bandName}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <!-- the following breaks are intended to push the "Submut" button lower in the column -->
+                    <br>
+                    <div id="profileSubmit">
+                        <input type="submit" class="btn btn-secondary btn-block" value="Submit">
+                    </div>
+                    <br>
+                    <h3><a href="/band/register">Create new band or group profile?</a></h3>
+                </div>
+
+                <!-- Column 3 -->
+                <div id="column3" class="col-lg-4 col-md-4 col-sm-12">
+                    <h3 class="feature-title">Username / Password</h3>
+                    <div>
+                        <div class="form-group">
+                            <label for="usernameInput">Username</label>
+                            <p>Create new username</p>
+                            <input type="text" class="form-control" id="usernameInput" placeholder="Username"
+                                   aria-describedby="usernameHelp" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <p>Create password</p>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
+
+{{>footer}}

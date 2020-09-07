@@ -5,9 +5,16 @@ module.exports = {
     getBands: async (req, res) => {
         try {
             if(sessionChecker(req)) {
+                const artist = await Artist.findByPk(req.session.user.id, {
+                    raw: true
+                });
+                if(!artist.band_id) {
+                    res.redirect('/band/register');
+                    return;
+                }
                 let band = await Band.findOne({
                     where: {
-                        id: req.session.user.band_id
+                        id: artist.band_id
                     },
                     raw: true
                 });
@@ -19,6 +26,7 @@ module.exports = {
                 res.redirect('/')
             }
         } catch (e) {
+            console.log(e.message);
             res.render('error', {
                 title: "Bands error"
             })
@@ -66,9 +74,13 @@ module.exports = {
     },
     getRegisterBand: async (req, res) => {
         try {
-            res.render('band/register', {
-                title: 'Register New Band'
-            })
+            if(sessionChecker(req)) {
+                res.render('band/register', {
+                    title: 'Register New Band'
+                })
+            } else {
+                res.redirect('/');
+            }
         } catch (e) {
             res.render('error', {
                 title: "New Band error"
@@ -77,8 +89,20 @@ module.exports = {
     },
     postRegisterBand: async (req, res) => {
         try {
-            await Band.create(req.body);
-            res.redirect('/')
+            if(sessionChecker(req)) {
+                const band = await Band.create(req.body, {
+                    raw: true
+                });
+                console.log(band);
+                await Artist.update({
+                    band_id: band.id
+                }, {
+                    where: {
+                        id: req.session.user.id
+                    }
+                })
+                res.redirect('/')
+            }
         } catch (e) {
             res.status(500).render('error', {
                 title: "New Band error"
@@ -106,6 +130,22 @@ module.exports = {
         } catch (e) {
             res.render('error', {
                 title: "Add Band error"
+            })
+        }
+    },
+    getBandById: async (req, res) => {
+        try {
+            const band = await Band.findByPk(req.params.id, {
+                raw: true
+            });
+            console.log(band);
+            res.render('band/showBand', {
+                title: "band info",
+                band
+            })
+        } catch (e) {
+            res.render('error', {
+                title: "band error"
             })
         }
     }

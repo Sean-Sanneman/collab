@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const cors = require('cors');
 
 var session = require('express-session');
 var exphbs  = require('express-handlebars');
@@ -23,6 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors());
 
 app.use(session({
     key: 'user_sid',
@@ -33,7 +35,7 @@ app.use(session({
     resave: false, // we support the touch method so per the express-session docs this should be set to false
     saveUninitialized: false,
     cookie: {
-        expires: 600000
+        expires: 24 * 60 * 60 * 1000
     }
 }));
 
