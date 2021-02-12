@@ -4,6 +4,8 @@
 
 Collab is a website being developed to help musicians find other musicians to collaborate with remotely. Our MVP allows people to create a user account, and search for other users/bands by instruments and genres. Collab will eventually become a social networking platform where musicians can communicate about the projects they are working on, share project files, find people to record tracks for their project, etc.
 
+2/12/2021 Update: Collab has reincarnated, and is now being developed under the name wizzymuse. More info coming soon.
+
 ## Table Of Contents
 
 - [Installation](#installation)
